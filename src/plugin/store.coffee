@@ -466,7 +466,7 @@ class Annotator.Plugin.Store extends Annotator.Plugin
     delete annotation.highlights
 
     # Preload with extra data.
-    $.extend(annotation, @options.annotationData)
+    $.extend(true, annotation, @options.annotationData)
     data = JSON.stringify(annotation)
 
     # Restore the highlights array.
